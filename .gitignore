@@ -1,0 +1,31 @@
+# === Python cache / build ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.log
+
+# === Virtual environments ===
+.venv/
+venv/
+env/
+ENV/
+
+# === IDE / Editor configs ===
+.vscode/
+.idea/
+
+# === Data / Outputs ===
+data/
+*.csv
+clips/
+
+# === Movies ===
+# Игнорируем всё в movies/, кроме .gitkeep (чтобы папка осталась пустой в git)
+movies/*
+!movies/.gitkeep
+
+# === OS junk ===
+.DS_Store
+Thumbs.db
