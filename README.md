@@ -63,7 +63,7 @@ pip install -r requirements.txt
 
 
 Структура данных
-├── search_once.py    #скрипт
+├── search_once.py    # скрипт
 ├── movies/           # сложите сюда видео (*.mp4, *.mkv, *.avi, *.mov)
 └── clips/            # сюда упадут нарезанные клипы и CSV (создастся автоматически)
 
