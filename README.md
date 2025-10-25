@@ -62,10 +62,11 @@ ffmpeg -version
 pip install -r requirements.txt
 
 
-Структура данных
-├── search_once.py    # скрипт
-├── movies/           # сложите сюда видео (*.mp4, *.mkv, *.avi, *.mov)
-└── clips/            # сюда упадут нарезанные клипы и CSV (создастся автоматически)
+Cтруктура проекта 
+├── search_once.py       # основной скрипт
+├── requirements.txt
+├── movies/              # сюда кладём фильмы (*.mp4, *.mkv, *.avi, *.mov)
+└── clips/               # сюда упадут готовые клипы и CSV (создаётся автоматически)
 
 
 ## Запуск
