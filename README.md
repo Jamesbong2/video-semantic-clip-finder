@@ -1,18 +1,43 @@
-# Video Semantic Clip Finder
+# video_search (CLIP-based snippet finder)
 
-Ищет в фильмах моменты по текстовому запросу (CLIP), режет клипы и сохраняет в `clips/<query>`, плюс пишет CSV с колонками:
+Ищет по запросу (например, `fight`) релевантные моменты в фильмах и режет короткие клипы (5 сек).
+На выходе: папка `clips/<query>/...mp4` и CSV `clips/results_<query>.csv` с колонками:
 `outfile,start_sec,end_sec,query`.
 
 ## Требования
-- Python 3.9–3.12
-- FFmpeg в PATH
-- PyTorch (ставится вручную под вашу ОС/CUDA)
+
+- **Python 3.10+**
+- **FFmpeg** в PATH (проверьте `ffmpeg -version`)
+- **PyTorch** (GPU желательно, но есть CPU-режим)
+- Остальные библиотеки из `requirements.txt`
+
+> ⚠️ Для PyTorch подберите сборку под вашу CUDA/OS:  
+> https://pytorch.org/get-started/locally/  
+> Примеры:
+> - CUDA 12.x: `pip install torch --index-url https://download.pytorch.org/whl/cu121`
+> - CPU only: `pip install torch --index-url https://download.pytorch.org/whl/cpu`
 
 ## Установка
 
-1. Установите PyTorch под вашу систему (CPU или CUDA):
-   👉 https://pytorch.org/get-started/locally/
 
-2. Установите остальные зависимости:
-   ```bash
-   pip install -r requirements.txt
+# 1) создать виртуалку (по желанию)
+python -m venv venv
+# Windows: venv\Scripts\activate
+# Linux/Mac: source venv/bin/activate
+
+# 2) поставить torch (какой подойдёт вам на вашу систему)(https://pytorch.org/)
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+# 3) поставить остальные библиотеки
+pip install -r requirements.txt
+Структура данных
+
+.
+├── search_once.py    #скрипт
+├── movies/           # сложите сюда видео (*.mp4, *.mkv, *.avi, *.mov)
+└── clips/            # сюда упадут нарезанные клипы и CSV (создастся автоматически)
+
+
+## Запуск
+
+python search_once.py "fight" 
