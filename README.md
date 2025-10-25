@@ -28,6 +28,35 @@ python -m venv venv
 
 # 2) поставить torch (какой подойдёт вам на вашу систему)(https://pytorch.org/)
 Пример : pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+🎞️ Установка FFmpeg
+
+# 3) FFmpeg нужен для вырезания видеофрагментов 
+
+🪟 Windows
+Перейдите на https://ffmpeg.org/download.html → Windows builds
+
+Скачайте архив (например, от gyan.dev)  
+Распакуйте, например в C:\ffmpeg
+
+Добавьте путь C:\ffmpeg\bin в PATH:
+
+Панель управления → Система → Доп. параметры системы → Переменные среды
+
+В «Path» добавьте C:\ffmpeg\bin
+
+Проверьте установку:
+ffmpeg -version
+
+🍎 macOS
+brew install ffmpeg
+
+🐧 Linux (Ubuntu/Debian)
+sudo apt update
+sudo apt install ffmpeg
+
+
+Проверьте:
+ffmpeg -version
 
 # 3) поставить остальные библиотеки
 pip install -r requirements.txt
