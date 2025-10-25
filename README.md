@@ -13,9 +13,10 @@
 
 > ⚠️ Для PyTorch подберите сборку под вашу CUDA/OS:  
 > https://pytorch.org/get-started/locally/  
+
 > Примеры:
-> - CUDA 12.x: `pip install torch --index-url https://download.pytorch.org/whl/cu121`
-> - CPU only: `pip install torch --index-url https://download.pytorch.org/whl/cpu`
+> - CUDA 12.x: `pip3 install torch --index-url https://download.pytorch.org/whl/cu121`
+> - CPU only: `pip3 install torch --index-url https://download.pytorch.org/whl/cpu`
 
 ## Установка
 
@@ -26,7 +27,7 @@ python -m venv venv
 # Linux/Mac: source venv/bin/activate
 
 # 2) поставить torch (какой подойдёт вам на вашу систему)(https://pytorch.org/)
-pip install torch --index-url https://download.pytorch.org/whl/cu121
+Пример : pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 
 # 3) поставить остальные библиотеки
 pip install -r requirements.txt
