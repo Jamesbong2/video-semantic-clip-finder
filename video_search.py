@@ -42,7 +42,7 @@ THR_FLOOR_KSIG = 2.0
 THR_ALPHA      = 1.2
 
 
-#классификатор CLIP 
+
 class ClipEncoder:
     def __init__(self, model_name="ViT-L-14", pretrained="openai"):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
